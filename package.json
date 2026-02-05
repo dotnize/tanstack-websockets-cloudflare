@@ -1,0 +1,35 @@
+{
+  "name": "tanstack-websockets-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "deploy": "pnpm run build && wrangler deploy",
+    "preview": "pnpm run build && vite preview",
+    "cf-typegen": "wrangler types",
+    "postinstall": "wrangler types"
+  },
+  "dependencies": {
+    "@cloudflare/vite-plugin": "^1.23.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/react-router": "^1.158.1",
+    "@tanstack/react-router-ssr-query": "^1.158.1",
+    "@tanstack/react-start": "^1.158.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.1.18",
+    "vite-tsconfig-paths": "^6.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.10",
+    "@types/react": "^19.2.11",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "wrangler": "^4.62.0"
+  }
+}
