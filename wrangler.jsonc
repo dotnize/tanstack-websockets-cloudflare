@@ -3,8 +3,22 @@
   "name": "tanstack-websockets-cloudflare",
   "compatibility_date": "2026-01-20",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry",
+  "main": "src/server.ts",
   "observability": {
     "enabled": true,
   },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CHAT_ROOMS",
+        "class_name": "ChatRoom",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "chat-rooms-v1",
+      "new_sqlite_classes": ["ChatRoom"],
+    },
+  ],
 }
