@@ -88,10 +88,30 @@ function RouteComponent() {
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 p-6">
-      <div>
+      <div className="text-sm">
         <h1 className="text-2xl font-semibold">Chat WebSocket Tester</h1>
-        <p className="text-black/60 text-sm">
+        <p className="text-black/60">
           Connect to a room and exchange messages via Durable Objects.
+        </p>
+        <p>
+          <a
+            href="https://github.com/dotnize/tanstack-websockets-cloudflare"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 underline hover:text-blue-600"
+          >
+            View code on GitHub
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://nize.ph/tanstack-start-websockets-cloudflare/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 underline hover:text-blue-600"
+          >
+            Guide
+          </a>
         </p>
       </div>
 
