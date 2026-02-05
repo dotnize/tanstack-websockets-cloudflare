@@ -102,14 +102,11 @@ function RouteComponent() {
             onChange={(event) => setRoomId(event.target.value)}
             placeholder="room-123"
           />
-          <div className="text-black/60 mt-2 text-xs">{wsUrl || "—"}</div>
         </div>
         <div className="flex items-end gap-2">
           <button
             className="bg-green-500 text-white rounded-md px-3 py-2 text-sm disabled:opacity-50"
-            disabled={
-              !wsUrl || status === "connected" || status === "connecting"
-            }
+            disabled={status === "connected" || status === "connecting"}
             onClick={connect}
             type="button"
           >
