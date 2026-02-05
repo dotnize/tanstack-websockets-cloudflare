@@ -116,7 +116,7 @@ function RouteComponent() {
             Connect
           </button>
           <button
-            className="rounded-md border px-3 py-2 text-sm disabled:opacity-50"
+            className="rounded-md border px-3 py-2 text-sm disabled:opacity-50 hover:bg-red-400 hover:text-white disabled:pointer-events-none"
             disabled={status !== "connected"}
             onClick={disconnect}
             type="button"
