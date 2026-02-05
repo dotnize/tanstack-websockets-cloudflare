@@ -75,6 +75,8 @@ function RouteComponent() {
 
   function disconnect() {
     wsRef.current?.close();
+    setStatus("disconnected");
+    wsRef.current = null;
   }
 
   function sendMessage() {
